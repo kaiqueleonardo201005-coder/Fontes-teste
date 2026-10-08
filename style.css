@@ -1,0 +1,582 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@800;900&family=Orbitron:wght@800;900&family=Playfair+Display:ital,wght@0,800;0,900;1,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 40px;
+    background: #0a0a0f;
+    color: white;
+}
+
+h1 {
+    margin-bottom: 70px;
+    margin-top: 30px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+    color: #888;
+    text-align: center;
+}
+
+.lista-animacoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 150px;
+    width: 100%;
+}
+
+p {
+    margin: 0;
+    font-size: 55px;
+    display: inline-block;
+    position: relative;
+}
+
+p {
+    margin: 0;
+    font-size: 55px;
+    display: inline-block;
+    position: relative;
+}
+
+.animacao1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    color: #ffffff;
+    position: relative;
+    letter-spacing: 2px;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.animacao1::before {
+    content: "🌿";
+    font-size: 26px;
+    position: absolute;
+    left: -14px;
+    top: -10px;
+    transform: rotate(-30deg);
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.8));
+}
+
+.animacao1::after {
+    content: "🍃";
+    font-size: 22px;
+    position: absolute;
+    right: -12px;
+    bottom: -6px;
+    transform: rotate(35deg);
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.8));
+}
+
+.animacao2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    color: transparent;
+    background: linear-gradient(
+        0deg,
+        #100000 0%,
+        #ff2200 35%,
+        #ffaa00 65%,
+        #ffffff 100%
+    );
+    background-size: 100% 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: lavaPulso 2.5s ease-in-out infinite alternate;
+    filter: drop-shadow(0 0 12px rgba(255, 34, 0, 0.7));
+}
+
+.animacao3 {
+    font-family: 'Orbitron', sans-serif;
+    color: #e0ffff;
+    -webkit-text-stroke: 1.5px #00ffff;
+    text-shadow: 
+        0 0 5px #00ffff,
+        0 0 15px #00ffff,
+        0 0 30px #0088ff;
+    animation: neonEletrico 2s infinite alternate;
+}
+
+.animacao4 {
+    font-family: 'Cinzel', serif;
+    font-weight: 900;
+    color: #ffffff;
+    position: relative;
+    letter-spacing: 3px;
+    text-shadow:
+        -2px 0 #ff0055,
+        2px 0 #00ffff,
+        0 0 8px rgba(255,255,255,0.25);
+    animation: glitchSuave 3s infinite ease-in-out;
+}
+
+.animacao4::before,
+.animacao4::after {
+    content: attr(class);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.animacao4::before {
+    color: #ff0055;
+    text-shadow: 3px 0 #ff0055;
+    animation: glitchCamadaRosa 3s infinite steps(1);
+}
+
+.animacao4::after {
+    color: #00ffff;
+    text-shadow: -3px 0 #00ffff;
+    animation: glitchCamadaCyan 3s infinite steps(1);
+}
+
+.animacao5 {
+    font-family: 'Cinzel Decorative', serif;
+    font-weight: 900;
+    color: transparent;
+    background: radial-gradient(
+        circle at 50% 100%,
+        #4aeb00 10%,
+        #00b3a1 40%,
+        #02cbe6 90%
+    );
+    background-size: 180% 180%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: bolhasLavaRoxa 5s ease-in-out infinite alternate;
+    filter: drop-shadow(0 0 18px rgba(0, 225, 255, 0.8));
+}
+
+.animacao6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    color: #e7c98b;
+    position: relative;
+    letter-spacing: 2px;
+    text-shadow:
+        0 0 5px rgba(255, 173, 66, 0.3),
+        0 4px 12px rgba(0, 0, 0, 0.8);
+}
+
+.animacao6::before {
+    content: "🍂";
+    position: absolute;
+    left: -35px;
+    top: -18px;
+    font-size: 28px;
+    transform: rotate(-25deg);
+    animation: folhaEsquerda 3s ease-in-out infinite;
+}
+
+.animacao6::after {
+    content: "🍁";
+    position: absolute;
+    right: -35px;
+    bottom: -15px;
+    font-size: 27px;
+    transform: rotate(25deg);
+    animation: folhaDireita 3.5s ease-in-out infinite;
+}
+
+.animacao7 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    color: #ffffff;
+    position: relative;
+    letter-spacing: 2px;
+    text-shadow:
+        0 0 2px #39ff14,
+        0 0 8px #20c020,
+        0 0 20px rgba(0, 255, 60, 0.7);
+    image-rendering: pixelated;
+    animation: pixelVerde 2.5s ease-in-out infinite alternate;
+}
+
+.animacao7::before {
+    content: "🍀";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 90px;
+    opacity: 0.08;
+    z-index: -1;
+    filter: blur(8px);
+    animation: auraVerde 3s ease-in-out infinite alternate;
+}
+
+.animacao8 {
+    font-family: 'Cinzel', serif;
+    font-weight: 900;
+    color: #ffffff;
+    position: relative;
+    letter-spacing: 3px;
+    text-shadow: 0 0 12px rgba(255,255,255,0.35);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 80px 100px;
+}
+
+.animacao8 .texto-carta {
+    position: relative;
+    z-index: 5;
+    white-space: nowrap;
+}
+
+.animacao8 .carta {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 30px;
+    height: 30px;
+
+    margin-left: -15px;
+    margin-top: -15px;
+
+    font-size: 27px;
+    line-height: 30px;
+    text-align: center;
+
+    pointer-events: none;
+    z-index: 4;
+}
+
+.animacao9 {
+    font-family: 'Cinzel Decorative', serif;
+    font-weight: 900;
+    color: transparent;
+    position: relative;
+    background: linear-gradient(
+        110deg,
+        #6b4500 0%,
+        #b8860b 20%,
+        #fff1a8 38%,
+        #d4af37 50%,
+        #fff4b0 62%,
+        #a66f00 82%,
+        #6b4500 100%
+    );
+    background-size: 250% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    filter: drop-shadow(0 0 7px rgba(212,175,55,0.45));
+    animation: ouroBrilhando 4s linear infinite;
+}
+
+.animacao9::before {
+    content: "𓆩👑𓆪";
+    position: absolute;
+    left: 50%;
+    top: -55px;
+    transform: translateX(-50%);
+    font-size: 34px;
+    color: #ffd700;
+    filter:
+        drop-shadow(0 0 3px #fff1a8)
+        drop-shadow(0 0 10px rgba(255,215,0,0.7));
+    animation: coroaDourada 3s ease-in-out infinite alternate;
+}
+
+.animacao10 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    color: transparent;
+    position: relative;
+    background:
+        radial-gradient(circle at 20% 30%, #ffffff 0 1px, transparent 2px),
+        radial-gradient(circle at 70% 20%, #ffffff 0 1px, transparent 2px),
+        radial-gradient(circle at 85% 75%, #ffffff 0 1.5px, transparent 2px),
+        radial-gradient(circle at 35% 80%, #ffffff 0 1px, transparent 2px),
+        radial-gradient(circle at 55% 50%, #ffffff 0 1px, transparent 2px),
+        linear-gradient(
+            135deg,
+            #09000f,
+            #220044,
+            #5b1a91,
+            #b46cff,
+            #321052,
+            #08000d
+        );
+    background-size:
+        90px 90px,
+        130px 130px,
+        110px 110px,
+        150px 150px,
+        100px 100px,
+        300% 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    filter: drop-shadow(0 0 12px rgba(148, 50, 255, 0.7));
+    animation: galaxiaMovimento 7s ease-in-out infinite alternate;
+}
+
+@keyframes lavaPulso {
+    0% {
+        background-position: 0% 0%;
+        filter: drop-shadow(0 0 8px rgba(255, 34, 0, 0.5));
+    }
+
+    100% {
+        background-position: 0% 100%;
+        filter: drop-shadow(0 0 20px rgba(255, 170, 0, 0.9));
+    }
+}
+
+@keyframes neonEletrico {
+    0% {
+        opacity: 1;
+        filter: drop-shadow(0 0 5px #00ffff);
+    }
+
+    100% {
+        opacity: 0.9;
+        filter: drop-shadow(0 0 18px #00ffff);
+    }
+}
+
+@keyframes glitchSuave {
+    0%, 88%, 100% {
+        clip-path: inset(0 0 0 0);
+        transform: translate(0);
+        text-shadow:
+            -2px 0 #ff0055,
+            2px 0 #00ffff,
+            0 0 8px rgba(255,255,255,0.25);
+    }
+
+    90% {
+        clip-path: inset(12% 0 70% 0);
+        transform: translate(-4px, 1px);
+        text-shadow:
+            -5px 0 #ff0055,
+            5px 0 #00ffff;
+    }
+
+    92% {
+        clip-path: inset(65% 0 8% 0);
+        transform: translate(5px, -2px);
+        text-shadow:
+            4px 0 #ff0055,
+            -4px 0 #00ffff;
+    }
+
+    94% {
+        clip-path: inset(35% 0 35% 0);
+        transform: translate(-2px, 2px);
+        text-shadow:
+            -8px 0 #ff0055,
+            8px 0 #00ffff;
+    }
+
+    96% {
+        clip-path: inset(0 0 0 0);
+        transform: translate(2px, 0);
+    }
+}
+
+@keyframes glitchCamadaRosa {
+    0%, 88%, 100% {
+        opacity: 0;
+        transform: translate(0);
+    }
+
+    90% {
+        opacity: 0.8;
+        transform: translate(-5px, 0);
+        clip-path: inset(15% 0 65% 0);
+    }
+
+    94% {
+        opacity: 0.7;
+        transform: translate(6px, 0);
+        clip-path: inset(55% 0 20% 0);
+    }
+
+    96% {
+        opacity: 0;
+    }
+}
+
+@keyframes glitchCamadaCyan {
+    0%, 88%, 100% {
+        opacity: 0;
+        transform: translate(0);
+    }
+
+    92% {
+        opacity: 0.8;
+        transform: translate(5px, 0);
+        clip-path: inset(60% 0 10% 0);
+    }
+
+    95% {
+        opacity: 0.7;
+        transform: translate(-6px, 0);
+        clip-path: inset(20% 0 55% 0);
+    }
+
+    97% {
+        opacity: 0;
+    }
+}
+
+@keyframes bolhasLavaRoxa {
+    0% {
+        background-position: 50% 100%;
+        filter: drop-shadow(0 0 10px rgba(255, 0, 212, 0.5));
+    }
+
+    50% {
+        background-position: 100% 0%;
+        filter: drop-shadow(0 0 22px rgba(123, 44, 191, 0.9));
+    }
+
+    100% {
+        background-position: 0% 50%;
+        filter: drop-shadow(0 0 14px rgba(255, 0, 212, 0.7));
+    }
+}
+
+@keyframes folhaEsquerda {
+    0%, 100% {
+        transform: rotate(-25deg) translateY(0);
+    }
+
+    50% {
+        transform: rotate(-12deg) translateY(-6px);
+    }
+}
+
+@keyframes folhaDireita {
+    0%, 100% {
+        transform: rotate(25deg) translateY(0);
+    }
+
+    50% {
+        transform: rotate(40deg) translateY(5px);
+    }
+}
+
+@keyframes pixelVerde {
+    0% {
+        text-shadow:
+            0 0 2px #39ff14,
+            0 0 8px #20c020,
+            0 0 15px rgba(0,255,60,0.5);
+    }
+
+    100% {
+        text-shadow:
+            2px 0 2px #39ff14,
+            -2px 0 8px #20c020,
+            0 0 28px rgba(0,255,60,0.9);
+    }
+}
+
+@keyframes auraVerde {
+    0% {
+        opacity: 0.04;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+
+    100% {
+        opacity: 0.14;
+        transform: translate(-50%, -50%) scale(1.3);
+    }
+}
+
+@keyframes orbitaCarta {
+    from {
+        transform: rotate(0deg) translateX(115px) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(115px) rotate(-360deg);
+    }
+}
+
+@keyframes ouroBrilhando {
+    0% {
+        background-position: 0% 50%;
+        filter: drop-shadow(0 0 5px rgba(212,175,55,0.35));
+    }
+
+    45% {
+        background-position: 45% 50%;
+        filter: drop-shadow(0 0 7px rgba(212,175,55,0.45));
+    }
+
+    55% {
+        background-position: 55% 50%;
+        filter: drop-shadow(0 0 18px rgba(255,215,0,0.9));
+    }
+
+    65% {
+        background-position: 65% 50%;
+        filter: drop-shadow(0 0 7px rgba(212,175,55,0.45));
+    }
+
+    100% {
+        background-position: 100% 50%;
+        filter: drop-shadow(0 0 5px rgba(212,175,55,0.35));
+    }
+}
+
+@keyframes coroaDourada {
+    0% {
+        transform: translateX(-50%) translateY(0) scale(1);
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(-5px) scale(1.05);
+    }
+}
+
+@keyframes galaxiaMovimento {
+    0% {
+        background-position:
+            0 0,
+            0 0,
+            0 0,
+            0 0,
+            0 0,
+            0% 50%;
+        filter: drop-shadow(0 0 8px rgba(123, 44, 191, 0.5));
+    }
+
+    50% {
+        background-position:
+            25px -15px,
+            -20px 20px,
+            15px 25px,
+            -25px -10px,
+            20px -20px,
+            50% 50%;
+        filter: drop-shadow(0 0 16px rgba(170, 90, 255, 0.8));
+    }
+
+    100% {
+        background-position:
+            45px -30px,
+            -40px 40px,
+            30px 50px,
+            -50px -20px,
+            40px -40px,
+            100% 50%;
+        filter: drop-shadow(0 0 12px rgba(123, 44, 191, 0.7));
+    }
+}
